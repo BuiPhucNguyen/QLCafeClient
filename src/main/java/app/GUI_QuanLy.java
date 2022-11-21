@@ -95,7 +95,7 @@ public class GUI_QuanLy extends JFrame implements ActionListener, MouseListener 
 		tabbedPane.addTab("TRANG CHỦ", new ImageIcon("image/trangchu.png"), pnlTrangChu, "TRANG CHỦ");
 //		tabbedPane.addTab("QUẢN LÝ KHÁCH HÀNG", new ImageIcon("image/khachhang.png"), pnlKhachHang, "QUẢN LÝ KHÁCH HÀNG");
 		tabbedPane.addTab("QUẢN LÝ NHÂN VIÊN", new ImageIcon("image/nhanvien.png"), pnlNhanVien, "QUẢN LÝ NHÂN VIÊN");
-		tabbedPane.addTab("QUẢN LÝ BÀN", new ImageIcon("image/phonghat.png"), pnlPhongHat, "QUẢN LÝ BÀN");
+		tabbedPane.addTab("QUẢN LÝ BÀN", new ImageIcon("image/ban.png"), pnlPhongHat, "QUẢN LÝ BÀN");
 		tabbedPane.addTab("QUẢN LÝ DỊCH VỤ", new ImageIcon("image/dichvu.png"), pnlDichVu, "QUẢN LÝ DỊCH VỤ");
 		tabbedPane.addTab("THỐNG KÊ", new ImageIcon("image/thongke.png"), pnlTKDoanhThu, "THỐNG KÊ");
 		

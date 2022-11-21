@@ -113,8 +113,8 @@ public class GUI_NhanVien extends JFrame implements ActionListener, MouseListene
 
 		/* add tab with JPanel */
 		tabbedPane.addTab("TRANG CHỦ", new ImageIcon("image/trangchu.png"), pnlTrangChu, "TRANG CHỦ");
-		tabbedPane.addTab("ĐẶT BÀN", new ImageIcon("image/khachhang.png"), pnlDatPhong, "ĐẶT BÀN");
-		tabbedPane.addTab("THANH TOÁN", new ImageIcon("image/phonghat.png"), pnlTraPhong, "THANH TOÁN");
+		tabbedPane.addTab("ĐẶT BÀN", new ImageIcon("image/ban.png"), pnlDatPhong, "ĐẶT BÀN");
+		tabbedPane.addTab("THANH TOÁN", new ImageIcon("image/thanhtoan.png"), pnlTraPhong, "THANH TOÁN");
 //		tabbedPane.addTab("QUẢN LÝ KHÁCH HÀNG", new ImageIcon("image/khachhang.png"), pnlKhachHang, "QUẢN LÝ KHÁCH HÀNG");
 		
 this.addWindowListener(new WindowListener() {
@@ -158,9 +158,10 @@ this.addWindowListener(new WindowListener() {
 //						HoaDon hd = null;
 						List<HoaDon> listHD = dao_HD.getHDChuaThanhToan();
 						for (HoaDon hd_temp : listHD) {
-							if (hd_temp.getMaBan().getTenBan().equalsIgnoreCase("Mua mang về")) {
+							Ban b = dao_Ban.getBanTheoMa(hd_temp.getMaBan().getMaBan());
+							if (b.getTenBan().equalsIgnoreCase("Mua mang về")) {
 //								hd = hd_temp;
-								List<ChiTietHoaDon> listCTHD = hd_temp.getNuocs();
+								List<ChiTietHoaDon> listCTHD = dao_CTHD.getCTHDTheoMa(hd_temp.getMaHD());
 								for (ChiTietHoaDon ct : listCTHD) {
 									dao_CTHD.xoaCTHD(hd_temp.getMaHD(), ct.getMaNuoc().getMaNuoc());
 								}
