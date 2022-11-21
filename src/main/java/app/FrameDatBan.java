@@ -925,7 +925,8 @@ public class FrameDatBan extends JFrame {
 					String maHD = "";
 					List<HoaDon> list = dao_HD.getHDChuaThanhToan();
 					for (HoaDon hd_temp : list) {
-						if (hd_temp.getMaBan().getTenBan().equalsIgnoreCase(lblBanDangChon.getText())) {
+						Ban b = dao_Ban.getBanTheoMa(hd_temp.getMaBan().getMaBan());
+						if (b.getTenBan().equalsIgnoreCase(lblBanDangChon.getText())) {
 							maHD = hd_temp.getMaHD();
 						}
 					}
