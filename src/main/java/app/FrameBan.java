@@ -435,7 +435,7 @@ public class FrameBan extends JFrame  {
 						}
 						
 						if(list.size() == 0) {
-							JOptionPane.showMessageDialog(null, "Không có phòng hát nào phù hợp với tiêu chí", "Lỗi",
+							JOptionPane.showMessageDialog(null, "Không có bàn nào phù hợp với tiêu chí", "Lỗi",
 									JOptionPane.ERROR_MESSAGE);
 							return;
 						}
