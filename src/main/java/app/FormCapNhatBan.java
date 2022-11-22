@@ -43,7 +43,7 @@ public class FormCapNhatBan extends JFrame implements KeyListener {
 			e2.printStackTrace();
 		}
 		// ------------------
-		setTitle("CẬP NHẬT PHÒNG");
+		setTitle("CẬP NHẬT BÀN");
 		setSize(380, 170);
 		setLocationRelativeTo(null);
 		ImageIcon icon = new ImageIcon("image/logodark.png");
